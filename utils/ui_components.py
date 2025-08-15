@@ -68,7 +68,7 @@ def display_stock_info(stock_info: dict, symbol: str):
             
         with range_col3:
             div_yield = stock_info.get('dividend_yield')
-            st.metric("Dividend Yield", f"{div_yield*100:.2f}%" if div_yield else "N/A")
+            st.metric("Dividend Yield", f"{div_yield:.4f}%" if div_yield else "N/A")
     
     # Company description
     description = stock_info.get('description', '')
